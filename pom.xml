@@ -14,6 +14,23 @@
         <module>mybatis-02</module>
     </modules>
 
+    <!--使配置文件输出到target  -->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/Java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
     <!--导入依赖-->
     <dependencies>
         <dependency>

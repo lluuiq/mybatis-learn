@@ -42,7 +42,7 @@ public class UserMapperTest {
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 
 
-        int i = mapper.addUser(new User(5, "lu", "admin"));
+        int i = mapper.addUser(new User(7, "lu", "admin1"));
         if (i > 0) {
             System.out.println("插入成功");
         } else {
@@ -50,7 +50,7 @@ public class UserMapperTest {
         }
 
         // 提交事务
-        //sqlSession.commit();
+        sqlSession.commit();
 
         sqlSession.close();
     }
