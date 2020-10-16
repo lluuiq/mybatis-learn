@@ -4,7 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!--引入外部配置文件-->
-    <properties resource="db.properties"/>
+    <properties resource="db.properties">
+        <property name="username" value="root"/>
+        <property name="password" value="aA562959681"/>
+    </properties>
+
+    <!--设置别名-->
+    <typeAliases>
+        <package name="com.lu.pojo"/>
+    </typeAliases>
 
     <environments default="test">
         <!-- 测试环境 -->
@@ -33,6 +41,8 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/lu/dao/UserMapper.xml"/>
+        <!--<mapper resource="com/lu/dao/UserMapper.xml"/>-->
+        <!--<mapper class="com.lu.dao.UserMapper"/>-->
+        <package name="com.lu.dao"/>
     </mappers>
 </configuration>

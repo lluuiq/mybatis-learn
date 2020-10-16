@@ -9,20 +9,20 @@
     <!-- ID 对应接口中的方法名 -->
     <!-- 这里的作用就相当于原本的重写方法 -->
     <!-- resultType 将返回结果给 pojo的User类 (该类已经定义了字段、get与set、toString、构造方法)-->
-    <select id="getUserList" resultType="com.lu.pojo.User">
+    <select id="getUserList" resultType="hello">
         select * from mybatis.user;
     </select>
 
-    <select id="getUserById" parameterType="int" resultType="com.lu.pojo.User">
+    <select id="getUserById" parameterType="int" resultType="hello">
         select * from mybatis.user where id=#{id};
     </select>
 
     <!--对象中的属性可以直接取出来-->
-    <insert id="addUser" parameterType="com.lu.pojo.User">
+    <insert id="addUser" parameterType="hello">
         insert into mybatis.user(id,username,password) values (#{id},#{username},#{password});
     </insert>
 
-    <update id="updateUser" parameterType="com.lu.pojo.User">
+    <update id="updateUser" parameterType="hello">
         update mybatis.user set username=#{username} , password=#{password} where id=#{id};
     </update>
 

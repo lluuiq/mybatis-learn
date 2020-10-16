@@ -1,9 +1,11 @@
 package com.lu.pojo;
 
+import org.apache.ibatis.type.Alias;
 
 /**
  * 实体类
  */
+@Alias("hello")
 public class User {
     private int id;
     private String username;

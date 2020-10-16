@@ -12,9 +12,13 @@
     <modules>
         <module>mybatis-01</module>
         <module>mybatis-02</module>
+        <module>mybatis-03</module>
+        <module>mybatis-04</module>
+        <module>mybatis-05</module>
+        <module>mybatis-06</module>
     </modules>
 
-    <!--使配置文件输出到target  -->
+    <!-- 解决读取不到 java下的xml文件问题  -->
     <build>
         <resources>
             <resource>
@@ -23,14 +27,9 @@
                     <exclude>**/*.java</exclude>
                 </excludes>
             </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
         </resources>
     </build>
+
     <!--导入依赖-->
     <dependencies>
         <dependency>
@@ -50,6 +49,22 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>
