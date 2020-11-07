@@ -16,6 +16,10 @@
         <module>mybatis-04</module>
         <module>mybatis-05</module>
         <module>mybatis-06</module>
+        <module>mybatis-07</module>
+        <module>mybatis</module>
+        <module>mybatis-08</module>
+        <module>mybatis-09</module>
     </modules>
 
     <!-- 解决读取不到 java下的xml文件问题  -->
